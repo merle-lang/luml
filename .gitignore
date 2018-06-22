@@ -1,0 +1,7 @@
+_build
+.merlin
+.vscode
+merle.install
+*.swp
+release
+*.install

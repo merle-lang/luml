@@ -1,0 +1,9 @@
+(jbuild_version 1)
+
+(executables (
+  (names (luml mkstdlib))
+  (public_names (luml mkstdlib))
+  (libraries (lib lambda-term lwt core_kernel))
+  (preprocess
+    (pps (lwt.ppx)))
+))

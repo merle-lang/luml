@@ -1,0 +1,12 @@
+(jbuild_version 1)
+
+(executable (
+  (name luml_test)
+  (libraries (lib alcotest))
+))
+
+(alias (
+  (name runtest)
+  (deps (luml_test.exe))
+  (action (run ${<} --verbose))
+))

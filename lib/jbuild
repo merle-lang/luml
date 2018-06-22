@@ -1,0 +1,22 @@
+(jbuild_version 1)
+
+(library (
+  (name lib)
+  (c_names          (lua))
+  (c_flags          (:include c_flags.sexp))
+  (flags     (:standard -warn-error +8))
+  (c_library_flags  (:include c_library_flags.sexp))
+  (preprocess (pps (ppx_jane)))
+  (libraries (str core ANSITerminal ocamlgraph))))
+
+(rule
+ ((targets (c_flags.sexp
+            c_library_flags.sexp))
+  (deps    (config/discover.exe))
+  (action  (run ${<} -ocamlc ${OCAMLC}))))
+
+(ocamllex (lexer))
+
+(menhir
+ ((flags ("-v" "--strict" "--explain"))
+ (modules (parser))))

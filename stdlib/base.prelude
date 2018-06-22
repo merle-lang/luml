@@ -1,0 +1,6 @@
+import Base ((+), (-), (*), (/), (+.), (*.), (|>), (<|), (==), (/=), (&&), (||), (++), (<), (>), (>>), mod, range, toString, log, flip, always, fst, snd)
+import List
+import String
+import Option (Some, None, Option)
+import Result (Result)
+

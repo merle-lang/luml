@@ -1,0 +1,10 @@
+opam-version: "2.0"
+name: "luml"
+version: "0.0.1"
+maintainer: "Dave Jeffrey <lepoetemaudit>"
+build: [
+  ["jbuilder" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "jbuilder" "alcotest" "core_kernel" "menhir" "ANSITerminal" "ocamlgraph" "lambda-term"
+]
